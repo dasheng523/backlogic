@@ -295,7 +295,7 @@
 					</script></head><body>';
 
 			// Print Index
-			echo '<font face="Arial" Size="3"><b>';
+			echo '<font Face="Arial" Size="3"><b>';
 			echo 'SmartTemplate Debugger<br>';
 			echo '<font size="2"><li>PHP-Script: ' . $_SERVER['PATH_TRANSLATED'] . '</li><li>Template: ' . $this->filename . '</li></font><hr>';
 			echo '<li><a href="#template_code">Template</a></li>';
@@ -304,7 +304,7 @@
 			echo '</b></font><hr>';
 
 			// Print Template
-			echo '<a name="template_code"><br><font face="Arial" Size="3"><b>Template:</b>&nbsp;[<a href="javascript:void(\'\');" onclick="toggleVisibility(document.getElementById(\'Template\'), this); return false">Hide Ouptut</a>]</font><br>';
+			echo '<a name="template_code"><br><font Face="Arial" Size="3"><b>Template:</b>&nbsp;[<a href="javascript:void(\'\');" onclick="toggleVisibility(document.getElementById(\'Template\'), this); return false">Hide Ouptut</a>]</font><br>';
 			echo '<table border="0" cellpadding="4" cellspacing="1" width="100%" bgcolor="#C6D3EF"><tr><td bgcolor="#F0F0F0"><pre id="Template" style="display:block">';
 			echo $page;
 			echo '</pre></td></tr></table>';
@@ -314,7 +314,7 @@
 			{
 				$parser = new SmartTemplateParser($this->filename);
 				$compiled  =  $parser->compile();
-				echo '<a name="compiled_code"><br><br><font face="Arial" Size="3"><b>Compiled Template:</b>&nbsp;[<a href="javascript:void(\'\');" onclick="toggleVisibility(document.getElementById(\'Compiled\'), this); return false">Hide Ouptut</a>]</font><br>';
+				echo '<a name="compiled_code"><br><br><font Face="Arial" Size="3"><b>Compiled Template:</b>&nbsp;[<a href="javascript:void(\'\');" onclick="toggleVisibility(document.getElementById(\'Compiled\'), this); return false">Hide Ouptut</a>]</font><br>';
 				echo '<table border="0" cellpadding="4" cellspacing="1" width="100%" bgcolor="#C6D3EF"><tr><td bgcolor="#F0F0F0"><pre id="Compiled" style="display:block">';
 				highlight_string($compiled);
 				echo '</pre></td></tr></table>';
@@ -325,7 +325,7 @@
 			}
 
 			// Print Data
-			echo '<a name="data_code"><br><br><font face="Arial" Size="3"><b>Data:</b>&nbsp;[<a href="javascript:void(\'\');" onclick="toggleVisibility(document.getElementById(\'Data\'), this); return false">Hide Ouptut</a>]</font><br>';
+			echo '<a name="data_code"><br><br><font Face="Arial" Size="3"><b>Data:</b>&nbsp;[<a href="javascript:void(\'\');" onclick="toggleVisibility(document.getElementById(\'Data\'), this); return false">Hide Ouptut</a>]</font><br>';
 			echo '<table border="0" cellpadding="4" cellspacing="1" width="100%" bgcolor="#C6D3EF"><tr><td bgcolor="#F0F0F0"><pre id="Data" style="display:block">';
 			echo $this->vardump($vars);
 			echo '</pre></td></tr></table></body></html>';
