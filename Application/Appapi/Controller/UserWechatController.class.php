@@ -10,6 +10,7 @@ class UserWechatController extends Controller {
     {
         $id=uuid();
         $userid = I('post.user_id');
+        $wechat_id=I('post.wechat_id');
         $openid=I('post.open_id');
         $nickname=I('post.nickname');
         $sex=I('post.sex');
@@ -22,7 +23,7 @@ class UserWechatController extends Controller {
         $remark=I('post.remark');
         $groupid=I('post.groupid');
         $unionid=I('post.unionid');
-        $UserWechat=D('user_wechat')->AddUserWechat($id,$userid,$openid,$nickname,$sex,$city,$country,$province,$language,$headimgurl,$subscribe_time,$remark,$groupid,$unionid);
+        $UserWechat=D('user_wechat')->AddUserWechat($id,$userid,$wechat_id,$openid,$nickname,$sex,$city,$country,$province,$language,$headimgurl,$subscribe_time,$remark,$groupid,$unionid);
         print_r($UserWechat[id]);
     }
 //根据用户名查寻
@@ -43,6 +44,7 @@ class UserWechatController extends Controller {
     {
         $id=I('post.id');
         $userid = I('post.user_id');
+        $wechat_id=I('post.wechat_id');
         $openid=I('post.open_id');
         $nickname=I('post.nickname');
         $sex=I('post.sex');
@@ -55,6 +57,6 @@ class UserWechatController extends Controller {
         $remark=I('post.remark');
         $groupid=I('post.groupid');
         $unionid=I('post.unionid');
-        D('user_wechat')->UpdateUserWechat($id,$userid,$openid,$nickname,$sex,$city,$country,$province,$language,$headimgurl,$subscribe_time,$remark,$groupid,$unionid);
+        D('user_wechat')->UpdateUserWechat($id,$userid,$wechat_id,$openid,$nickname,$sex,$city,$country,$province,$language,$headimgurl,$subscribe_time,$remark,$groupid,$unionid);
     }
 }

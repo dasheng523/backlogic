@@ -4,11 +4,12 @@ namespace Appapi\Model;
 use Think\Model;
 class UserWechatModel extends Model{
     //添加用户喜欢的店铺信息
-    public function AddUserWechat($id,$user_id,$open_id,$nickname,$sex,$city,$country,$province,$language,$headimgurl,$subscribe_time,$remark,$groupid,$unionid)
+    public function AddUserWechat($id,$user_id,$wechat_id,$open_id,$nickname,$sex,$city,$country,$province,$language,$headimgurl,$subscribe_time,$remark,$groupid,$unionid)
     {
         $UserWechat = M("user_wechat"); // 实例化User对象
         $data['id']=$id;
         $data['user_id'] = $user_id;
+        $data['wechat_id']=$wechat_id;
         $data['open_id'] = $open_id;
         $data['nickname']=$nickname;
         $data['sex']=$sex;
@@ -38,10 +39,11 @@ class UserWechatModel extends Model{
         $UserWechat ->where("id=$id")->delete();
     }
     //更新店铺信息
-    public function UpdateUserWechat($id,$user_id,$open_id,$nickname,$sex,$city,$country,$province,$language,$headimgurl,$subscribe_time,$remark,$groupid,$unionid)
+    public function UpdateUserWechat($id,$user_id,$wechat_id,$open_id,$nickname,$sex,$city,$country,$province,$language,$headimgurl,$subscribe_time,$remark,$groupid,$unionid)
     {
         $UserWechat = M("user_wechat"); // 实例化User对象
         $data['user_id'] = $user_id;
+        $data['wechat_id']=$wechat_id;
         $data['open_id'] = $open_id;
         $data['nickname']=$nickname;
         $data['sex']=$sex;
