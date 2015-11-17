@@ -30,7 +30,7 @@ class ShopModel extends Model{
     {
         $shop = M("shop"); // 实例化shop对象
 
-        $shop->where("name ='$name''")->delete();
+        $shop->where("name ='$name'")->delete();
     }
     //删除某一个店铺
     public function DeleteShopsById($id)
