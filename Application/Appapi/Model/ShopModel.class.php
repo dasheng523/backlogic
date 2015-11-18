@@ -51,5 +51,11 @@ class ShopModel extends Model{
         $data['blicence_media']=$blicence_media;
         $shop->where("id=$id")->save($data); // 根据条件更新记录
     }
+    public static  function get_topshop($ystoken)
+    {
+       $userid=convert_uid($ystoken);
+        $shopinfo=M('shop')->order('score desc')->select(9);
+        return $shopinfo;
 
+    }
 }
