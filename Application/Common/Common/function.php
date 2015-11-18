@@ -9,11 +9,6 @@ function return_json($data){
     echo json_encode($data,JSON_UNESCAPED_UNICODE);
 }
 
-//ystoken转换uid
-function convert_uid($ystoken){
-    // TODO
-    return 1;
-}
 
 
 function httpGet($url) {
