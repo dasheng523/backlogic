@@ -4,8 +4,7 @@ use Think\Controller;
 use Appapi\Logic\TestLogic;
 class TestController extends Controller {
     public function testrun(){
-        $data = TestLogic::testa();
-        echo json_encode($data);
+        echo httpPost("http://backlogic/index.php/Appapi/Test/getShopInfo",array("id"=>1));
     }
 
     public function getShopInfo(){
@@ -20,4 +19,5 @@ class TestController extends Controller {
         $data = TestLogic::getShopList($page,$category_id);
         return_json($data);
     }
+
 }
